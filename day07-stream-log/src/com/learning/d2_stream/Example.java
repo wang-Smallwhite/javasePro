@@ -50,6 +50,7 @@ public class Example {
 
         Stream<Staff> s1 = one.stream();
         Stream<Staff> s2 = two.stream();
+        // collect(Collectors.toList())  收集
         List<Staff> s3 = Stream.concat(s1, s2).collect(Collectors.toList());
         System.out.println("两个部门的平均工资：" + getAverage(s3));
 
